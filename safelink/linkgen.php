@@ -5,7 +5,7 @@ if (isset($_POST['link'])) {
   $link = $_POST['link'];
   $generate = md5(uniqid(rand(), true));
   $safelink = "http://localhost/neo/safelink/safe.php?url=$generate";
-  $queryadd = mysqli_query($connect, "INSERT INTO link VALUES('$generate','$link')") or die(mysqli_error());
+  $queryadd = mysqli_query($connect, "INSERT INTO link VALUES('','$generate','$link')") or die(mysqli_error());
   if ($queryadd == 1) {
     $status = 'success';
   }
