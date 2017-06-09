@@ -1,2 +1,4 @@
 /cache/
 /config/development/
+curl/curl.php
+curl/curlBatavia.php
