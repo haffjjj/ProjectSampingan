@@ -19,10 +19,7 @@ else {
     <?php
   endwhile;
 }
-$querycount = mysqli_query($connect, "SELECT count(id) as jumlah from post") or die (mysqli_error());
-$jumlah = mysqli_fetch_array($querycount);
-$rand = mt_rand(1,$jumlah['0']);
-$querypost = mysqli_query($connect, "SELECT * FROM post where id = '$rand'") or die (mysqli_error());
+$querypost = mysqli_query($connect, "SELECT * FROM post order by rand() limit 1") or die (mysqli_error());
 while($r = mysqli_fetch_array($querypost)):
 ?>
   <h2><?php echo $r['judul'] ?></h2>
