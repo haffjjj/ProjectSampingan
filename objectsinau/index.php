@@ -1,24 +1,14 @@
 <?php
-class sample
+class laptop
 {
-  function nama()
+  public static $harga;
+  public static function belicom()
   {
-    echo "Hafiz Joundy Syafie";
+    return "Beli komputer dengan harga".self::$harga;
   }
 }
 
-$obj = new sample();
-$obj->nama();
-class siswa
-{
-  var $nama;
-  var $kelas;
-  var $nohp;
-}
+laptop::$harga = 1000000;
+echo laptop::belicom();
 
-$joundy = new siswa();
-$joundy->nama="Hafiz Joundy Syafie";
-$joundy->kelas=11;
-$joundy->nohp='082199066627';
-echo $joundy->nohp;
-?>
+ ?>

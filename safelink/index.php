@@ -3,7 +3,7 @@ include "db.php";
 $query = mysqli_query($connect, "SELECT * FROM link") or die (mysqli_error());
 if(mysqli_num_rows($query) == 0)
 {
-  echo "tidak safelink";
+  echo "tidak ada safelink";
 }
 else {
   ?>
